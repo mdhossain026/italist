@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
+
+<!-- Base application theme. -->
+<style name="AppTheme" parent="Theme.AppCompat.Light">
+    <!-- Fix per ActionBar su API Lv. <11 -->
+    <item name="windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:actionBarStyle">@style/ActionBar.Solid.AppTheme</item>
+    <item name="actionBarStyle">@style/ActionBar.Solid.AppTheme</item>
+</style>
+
+<!-- Ereditiamo da ActionBar.Solid per evitare quella ActionBar trasparente orribile -->
+<style name="ActionBar.Solid.AppTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+
+    <item name="logo">@drawable/actionbar_logo</item>
+    <item name="android:logo">@drawable/actionbar_logo</item>
+    <!-- Impostiamo il logo per versioni che non supportano la proprietà android:logo -->
+
+</style>
+
+</resources>
+

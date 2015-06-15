@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <me.dm7.barcodescanner.zbar.ZBarScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff"
+        android:text="Inquadra il codice QR dell'etichetta e attendi il riconoscimento.\nSe l'app non riconosce il codice assicurati che l'etichetta sia ben illuminata e che l'immagine non sia sfuocata."
+        android:id="@+id/tvHint"
+        android:background="#c8000000"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="24dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/view_background"
+        android:gravity="center_vertical"
+        android:paddingBottom="90dp"
+        android:id="@+id/llHelp">
+        <!--
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_qrcode"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#ffe0e0e0" /> -->
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#80e0e0e0"
+                android:layout_toLeftOf="@+id/ivQRCodeIcon"
+                android:id="@+id/view" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#80E0E0E0"
+                android:layout_toRightOf="@+id/ivQRCodeIcon" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_qrcode"
+                android:padding="8dp"
+                android:background="#80E0E0E0"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/ivQRCodeIcon" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_one"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Scansiona l'etichetta italist"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_two"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Verifica che il prodotto scansionato sia quello corretto"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_three"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Scala in tempo reale la disponibilità del prodotto su italist"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SCALA DISPONIBILITÀ"
+        android:id="@+id/bStart"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/italist_button_background"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp" />
+
+</RelativeLayout>
